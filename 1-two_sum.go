@@ -4,7 +4,7 @@ import "fmt"
 
 // 两数之和
 func twoSum(nums []int, target int) []int {
-	res := make([]int, 0, 10)
+	var res []int
 	m := make(map[int]int)
 
 	for k, v := range nums {
