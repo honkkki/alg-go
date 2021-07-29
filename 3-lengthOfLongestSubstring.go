@@ -9,18 +9,18 @@ func lengthOfLongestSubstring(s string) int {
 	}
 
 	var freq [256]int
-	res, left, right := 0, 0, -1
+	res, left, right := 0, 0, 0
 
 	for left < len(s) {
-		if right+1 < len(s) && freq[s[right+1]-'a'] == 0 {
-			freq[s[right+1]-'a']++
+		if right < len(s) && freq[s[right]-'a'] == 0 {
+			freq[s[right]-'a']++
 			right++
 		} else {
 			freq[s[left]-'a']--
 			left++
 		}
 
-		res = max(res, right-left+1)
+		res = max(res, right-left)
 	}
 
 	return res
