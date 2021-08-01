@@ -29,6 +29,7 @@ func reverseList(head *ListNode) *ListNode {
 	return h
 }
 
+// 双指针 链表反转
 func reverseList2(head *ListNode) *ListNode {
 	cur := head
 	pre := new(ListNode)
