@@ -29,7 +29,7 @@ func (this *MinStack) Push(val int)  {
 		this.MinEleStack.li.PushBack(val)
 	} else {
 		min := this.MinEleStack.li.Back().Value.(int)
-		if min > val {
+		if min >= val {
 			this.MinEleStack.li.PushBack(val)
 		}
 	}
